@@ -2,12 +2,101 @@
 {% load static %}
 
 {% block content %}
-    <div class="container text-center my-5">
-        <h1 class="mb-4">Referenzen</h1>
+<div class="container my-5">
+    <h1 class="text-center mb-5">Referenzen</h1>
 
-        <!-- Адаптивное изображение -->
-        <img src="{% static 'img/logo2.png' %}" alt="Referenzbild" class="img-fluid rounded shadow mb-4" style="max-width: 100%; height: auto;">
+    <!-- Одна категория -->
+    <div class="mb-5">
+        <h3 class="text-center">Schalung</h3>
+         
 
-        <p>Einige unserer erfolgreich abgeschlossenen Projekte.</p>
+        <div class="row mt-4">
+            <div class="col-6 col-md-3 mb-4">
+                <a href="{% static 'img/h1.jpg' %}" target="_blank">
+                    <img src="{% static 'img/h1.jpg' %}" class="img-fluid rounded shadow gallery-thumb" alt="Bild 1">
+                </a>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+                <a href="{% static 'img/h2.jpg' %}" target="_blank">
+                    <img src="{% static 'img/h2.jpg' %}" class="img-fluid rounded shadow gallery-thumb" alt="Bild 2">
+                </a>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+                <a href="{% static 'img/h3.png' %}" target="_blank">
+                    <img src="{% static 'img/h3.png' %}" class="img-fluid rounded shadow gallery-thumb" alt="Bild 3">
+                </a>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+                <a href="{% static 'img/h4.png' %}" target="_blank">
+                    <img src="{% static 'img/h4.png' %}" class="img-fluid rounded shadow gallery-thumb" alt="Bild 4">
+                </a>
+            </div>
+        </div>
     </div>
+    <div class="mb-5">
+        <h3 class="text-center">Schalung</h3>
+         
+
+        <div class="row mt-4">
+            <div class="col-6 col-md-3 mb-4">
+                <a href="{% static 'img/h1.jpg' %}" target="_blank">
+                    <img src="{% static 'img/h1.jpg' %}" class="img-fluid rounded shadow gallery-thumb" alt="Bild 1">
+                </a>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+                <a href="{% static 'img/h2.jpg' %}" target="_blank">
+                    <img src="{% static 'img/h2.jpg' %}" class="img-fluid rounded shadow gallery-thumb" alt="Bild 2">
+                </a>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+                <a href="{% static 'img/h3.png' %}" target="_blank">
+                    <img src="{% static 'img/h3.png' %}" class="img-fluid rounded shadow gallery-thumb" alt="Bild 3">
+                </a>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+                <a href="{% static 'img/h4.png' %}" target="_blank">
+                    <img src="{% static 'img/h4.png' %}" class="img-fluid rounded shadow gallery-thumb" alt="Bild 4">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="mb-5">
+        <h3 class="text-center">Schalung</h3>
+         
+
+        <div class="row mt-4">
+            <div class="col-6 col-md-3 mb-4">
+                <a href="{% static 'img/h1.jpg' %}" target="_blank">
+                    <img src="{% static 'img/h1.jpg' %}" class="img-fluid rounded shadow gallery-thumb" alt="Bild 1">
+                </a>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+                <a href="{% static 'img/h2.jpg' %}" target="_blank">
+                    <img src="{% static 'img/h2.jpg' %}" class="img-fluid rounded shadow gallery-thumb" alt="Bild 2">
+                </a>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+                <a href="{% static 'img/h3.png' %}" target="_blank">
+                    <img src="{% static 'img/h3.png' %}" class="img-fluid rounded shadow gallery-thumb" alt="Bild 3">
+                </a>
+            </div>
+            <div class="col-6 col-md-3 mb-4">
+                <a href="{% static 'img/h4.png' %}" target="_blank">
+                    <img src="{% static 'img/h4.png' %}" class="img-fluid rounded shadow gallery-thumb" alt="Bild 4">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+.gallery-thumb {
+    transition: transform 0.3s ease;
+}
+.gallery-thumb:hover {
+    transform: scale(1.07);
+}
+</style>
 {% endblock %}
