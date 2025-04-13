@@ -23,7 +23,7 @@ def contact_form_view(request):
                 E-Mail: {email}
                 """
 
-        recipient_list = ["dimaadboos@gmail.com"]
+        recipient_list = ["levitchinicolai527@gmail.com"]
 
         send_mail(subject, message, os.getenv("EMAIL_HOST_USER"), recipient_list)
 
