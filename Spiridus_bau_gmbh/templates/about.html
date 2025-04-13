@@ -1,16 +1,44 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<div class="text-center">
+<div class="container my-5">
+    <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold">Über uns – Spiridus Bau GmbH</h1>
+        <p class="lead text-muted">Stark, erfahren und einsatzbereit.</p>
+    </div>
 
-    <h1>Über uns</h1>
-    <p>**Unsere 10-jährige Erfahrung und die Selbstständigkeit seit 2022 
-        in Wandschalung und Deckenschalung: Eine Historie der Innovation**
-        Willkommen auf unserer Webseite, die einen Blick auf unsere eindrucksvolle 
-        Reise durch 10 Jahre Fachkompetenz wirft, die uns im Jahr 2022 schließlich 
-        zur Selbstständigkeit im Bereich Wandschalung und Deckenschalung geführt hat. 
-        Unsere Geschichte ist eine Geschichte der kontinuierlichen Innovation, des Lernens und des Engagements 
-        für höchste Qualität.</p>
+    <div class="row mb-4">
+        <div class="col-md-6 mb-3">
+            <img src="{% static 'img/r17.jpg' %}" class="img-fluid rounded shadow-sm" alt="Baustelle 1">
+        </div>
+        <div class="col-md-6 mb-3">
+            <img src="{% static 'img/r19.jpg' %}" class="img-fluid rounded shadow-sm" alt="Baustelle 2">
+        </div>
+    </div>
 
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+            <p>
+                <strong>Spiridus Bau GmbH</strong> ist ein erfahrenes Bauunternehmen mit Sitz in der Schweiz.
+                Wir sind seit vielen Jahren in der Baubranche tätig und haben uns auf <strong>Schalungsarbeiten</strong>, 
+                <strong>Mauerwerk</strong>, <strong>Betonbau</strong> und <strong>Rohbau</strong> spezialisiert.
+            </p>
+            <p>
+                Unser Team besteht aus qualifizierten und motivierten Fachkräften – Schalern, Maurern und Kranführern, 
+                die ihre Arbeit mit <strong>Präzision</strong>, <strong>Verantwortung</strong> und <strong>Leidenschaft</strong> ausführen.
+            </p>
+            <h4 class="mt-4">Was uns besonders macht:</h4>
+            <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item">✅ Langjährige Erfahrung auf Schweizer Baustellen</li>
+                <li class="list-group-item">✅ Verlässliche, flexible und eingespielte Teams</li>
+                <li class="list-group-item">✅ Hohe Qualitätsstandards und termingerechte Ausführung</li>
+                <li class="list-group-item">✅ Klare Kommunikation und faire Zusammenarbeit mit unseren Partnern</li>
+            </ul>
+            <p>
+                Wir unterstützen unsere Kunden sowohl bei Neubau- als auch Umbauprojekten und bieten zusätzlich <strong>Personalverleih</strong> für andere Bauunternehmen.
+            </p>
+        </div>
+    </div>
 </div>
 {% endblock %}

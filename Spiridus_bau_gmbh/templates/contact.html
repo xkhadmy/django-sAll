@@ -1,36 +1,44 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container mt-5">
-    <h2 class="text-center mb-4">Kontaktformular</h2>
 
-    <form method="post" action="{% url 'Spiridus_bau_gmbh:contact' %}" class="p-4 border rounded bg-light shadow-sm">
+<div class="container my-5">
+    <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold">Kontaktieren Sie uns</h1>
+        <p class="lead text-muted">
+            Sie haben Fragen, möchten eine Offerte oder sich für eine Stelle bewerben?<br>
+            Nutzen Sie einfach das untenstehende Formular – wir melden uns schnellstmöglich bei Ihnen!
+        </p>
+    </div>
+
+    <form method="post" action="{% url 'Spiridus_bau_gmbh:contact' %}" class="p-4 p-md-5 bg-light rounded shadow-sm">
         {% csrf_token %}
 
-        <div class="row">
-            <div class="col-md-6 mb-3">
-                <label for="vorname" class="form-label">Vorname *</label>
+        <div class="row g-3">
+            <div class="col-md-6">
+                <label for="vorname" class="form-label">Vorname <span class="text-danger">*</span></label>
                 <input type="text" id="vorname" name="vorname" class="form-control" placeholder="Max" required>
             </div>
 
-            <div class="col-md-6 mb-3">
-                <label for="nachname" class="form-label">Nachname</label>
+            <div class="col-md-6">
+                <label for="nachname" class="form-label">Nachname <span class="text-danger">*</span></label>
                 <input type="text" id="nachname" name="nachname" class="form-control" placeholder="Mustermann" required>
             </div>
 
-            <div class="col-md-6 mb-3">
-                <label for="email" class="form-label">E-Mail</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="beispiel@mail.de" required>
+            <div class="col-md-6">
+                <label for="email" class="form-label">E-Mail <span class="text-danger">*</span></label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="beispiel@mail.ch" required>
             </div>
 
-            <div class="col-md-6 mb-3">
-                <label for="telephone" class="form-label">Telefon</label>
-                <input type="text" id="telephone" name="telephone" class="form-control" placeholder="+49 123 456789" required>
+            <div class="col-md-6">
+                <label for="telephone" class="form-label">Telefon <span class="text-danger">*</span></label>
+                <input type="text" id="telephone" name="telephone" class="form-control" placeholder="+41 76 123 45 67" required>
             </div>
-
-             
         </div>
 
-        <button type="submit" class="btn btn-primary w-100">Senden</button>
+        <div class="mt-4">
+            <button type="submit" class="btn btn-primary btn-lg w-100">Nachricht senden</button>
+        </div>
     </form>
 </div>
+
 {% endblock %}

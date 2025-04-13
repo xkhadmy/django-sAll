@@ -1,34 +1,44 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block content %}
-<div class="text-center ">
-  <h2>Was wir bieten</h2>
-  <div class="d-inline-block text-start">
-    <ul>
-      <li>Faire Löhne </li>
-      <li>13. Monatslohn und Spesen</li>
-      <li>Stabile Baustellen in der Deutschschweiz</li>
-      <li>Freundliches und erfahrenes Team</li>
-      <li>Unterkünfte für Mitarbeiter vorhanden</li>
-    </ul>
-  
 
-    <h2>Gesuchte Berufe</h2>
-    <ul>
-      <li>Schaler</li>
-      <li>Maurer</li>
-      <li>Kranführer</li>
-      <li>Bauarbeiter / Allrounder</li>
-    </ul>
-  </div>
-  <div class="kontakt d-inline-block text-start">
-    <p><strong>Kontakt für Bewerbung:</strong><br>
-    Nicolae Marius<br>
-    Tel: +41 76 123 45 67<br>
-    E-Mail: spiridusbaugmbh@gmail.com</p>
-  </div>
+{% block content %}
+<div class="container my-5">
+    <h1 class="text-center mb-4">Offene Stellen bei Spiridus Bau GmbH</h1>
+    <p class="text-center text-muted mb-5">
+        Sie möchten in einem motivierten Team mitwirken und Ihre Fähigkeiten auf spannenden Baustellen in der Deutschschweiz einbringen? 
+        Dann sind Sie bei uns genau richtig!
+    </p>
+
+    <div class="row mb-5">
+        <div class="col-md-6">
+            <h3>Was wir bieten</h3>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">✅ Faire und pünktliche Löhne</li>
+                <li class="list-group-item">✅ 13. Monatslohn & tägliche Spesen</li>
+                <li class="list-group-item">✅ Stabile Projekte in der gesamten Deutschschweiz</li>
+                <li class="list-group-item">✅ Kollegiales, erfahrenes und unterstützendes Team</li>
+                <li class="list-group-item">✅ Auf Wunsch: Unterkunft in der Nähe der Baustelle</li>
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <h3>Gesuchte Berufe</h3>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">🔨 Schaler – Spezialisten für Schalungsarbeiten</li>
+                <li class="list-group-item">🧱 Maurer – Profis im Mauerwerk und Rohbau</li>
+                <li class="list-group-item">🏗️ Kranführer – Präzise Steuerung auf der Baustelle</li>
+                <li class="list-group-item">👷 Bauarbeiter / Allrounder – Vielseitige Unterstützung auf allen Ebenen</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="text-center bg-light p-4 rounded shadow">
+        <h4 class="mb-3">Kontakt für Bewerbungen</h4>
+        <p>
+            📞 <strong>Nicolae Marius</strong><br>
+            Telefon: <a href="tel:+41761234567">+41 76 123 45 67</a><br>
+            ✉️ E-Mail: <a href="mailto:spiridusbaugmbh@gmail.com">spiridusbaugmbh@gmail.com</a>
+        </p>
+        <p class="text-muted">Wir freuen uns auf Ihre Bewerbung – telefonisch, per E-Mail oder über unser Kontaktformular!</p>
+    </div>
 </div>
 {% endblock %}
-
-
-
