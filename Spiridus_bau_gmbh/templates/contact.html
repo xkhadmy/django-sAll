@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Kontaktformular</h2>
+
+    <form method="post" action="{% url 'Spiridus_bau_gmbh:contact' %}" class="p-4 border rounded bg-light shadow-sm">
+        {% csrf_token %}
+
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="vorname" class="form-label">Vorname *</label>
+                <input type="text" id="vorname" name="vorname" class="form-control" placeholder="Max" required>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="nachname" class="form-label">Nachname</label>
+                <input type="text" id="nachname" name="nachname" class="form-control" placeholder="Mustermann" required>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="email" class="form-label">E-Mail</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="beispiel@mail.de" required>
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label for="telephone" class="form-label">Telefon</label>
+                <input type="text" id="telephone" name="telephone" class="form-control" placeholder="+49 123 456789" required>
+            </div>
+
+             
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Senden</button>
+    </form>
+</div>
+{% endblock %}

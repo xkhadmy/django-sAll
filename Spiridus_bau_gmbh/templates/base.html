@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiridus Bau GmbH</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Хедер с адаптивным меню -->
+    <header class="py-3 border-bottom bg-white shadow-sm">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                <div class="container-fluid">
+                    <a href="{% url 'Spiridus_bau_gmbh:home' %}" class="navbar-brand">
+                        <img src="{% static 'img/logo2.png' %}" alt="Spiridus Bau" class="img-fluid site-logo" style="max-height: 60px;">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="{% url 'Spiridus_bau_gmbh:home' %}" class="nav-link px-3 menu-link">Home</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle px-3 menu-link" href="#" id="dienstleistungenDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dienstleistungen
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dienstleistungenDropdown">
+                                    <li><a class="dropdown-item" href="{% url 'Spiridus_bau_gmbh:schalung' %}">Schalung</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'Spiridus_bau_gmbh:umbau' %}">Umbau</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a href="{% url 'Spiridus_bau_gmbh:about' %}" class="nav-link px-3 menu-link">Über uns</a></li>
+                            <li class="nav-item"><a href="{% url 'Spiridus_bau_gmbh:referenzen' %}" class="nav-link px-3 menu-link">Referenzen</a></li>
+                            <li class="nav-item"><a href="{% url 'Spiridus_bau_gmbh:offene_stellen' %}" class="nav-link px-3 menu-link">Offene Stellen</a></li>
+                            <li class="nav-item"><a href="{% url 'Spiridus_bau_gmbh:contact' %}" class="nav-link px-3 menu-link">Kontakt</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Контент -->
+    <div class="content-wrapper">
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MENU</h3>
+                <ul class="footer-menu">
+                    <li><a href="{% url 'Spiridus_bau_gmbh:home' %}">Home</a></li>
+                    <li><a href="{% url 'Spiridus_bau_gmbh:impressum' %}">Impressum</a></li>
+                    <li><a href="{% url 'Spiridus_bau_gmbh:datenschutz' %}">Datenschutz</a></li>
+                    <li><a href="{% url 'Spiridus_bau_gmbh:contact' %}">Kontakt</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Kontakt</h3>
+                <div class="contact-info">
+                    <p><i class="fas fa-phone"></i> +41 76 123 45 67</p>
+                    <p><i class="fas fa-envelope"></i> spiridusbaugmbh@gmail.com</p>
+                    <p><i class="fas fa-location-dot"></i> Zürich, Aargau, Luzern, Zug und ganze Deutschschweiz<br>
+     
+                </div>
+            </div>
+            
+
+            <div class="footer-section">
+                <h3>Öffnungszeiten</h3>
+                <div class="opening-hours">
+                    <p><i class="far fa-clock"></i> Mon – Fri: 8:30 – 18:00</p>
+                    <p><i class="far fa-clock"></i> Samstag: 9:30 – 15:00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>© 2025 All rights reserved 4pixels GmbH</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

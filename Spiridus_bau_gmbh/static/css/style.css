@@ -1,0 +1,180 @@
+      /* Добавляем базовые стили для правильного позиционирования */
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      html,
+      body {
+          height: 100%;
+      }
+
+      body {
+          display: flex;
+          flex-direction: column;
+          min-height: 100vh;
+      }
+
+      /* Стили для основного контента */
+      .content-wrapper {
+          flex: 1 0 auto;
+      }
+
+      /* Стили для логотипа */
+      .site-logo {
+          width: 100px;
+          height: auto;
+          object-fit: contain;
+      }
+
+      @media (max-width: 576px) {
+          .site-logo {
+              width: 50px;
+          }
+      }
+
+      /* Стили для меню */
+      .menu-link {
+          font-size: 22px;
+          font-weight: 700;
+          color: #333;
+          padding: 0.5rem 1rem;
+          transition: all 0.3s ease;
+          text-transform: uppercase;
+      }
+
+      .menu-link:hover,
+      .menu-link:focus {
+          color: #ff6600;
+          text-decoration: none;
+      }
+
+      .menu-link.active {
+          color: #ff6600;
+          font-weight: 700;
+      }
+
+      .footer {
+          background-color: #333;
+          color: #fff;
+          padding: 20px 0;
+          /* Уменьшили padding с 40px до 20px */
+          font-family: Arial, sans-serif;
+          margin-top: auto;
+      }
+
+      .footer-content {
+          max-width: 1200px;
+          margin: 0 auto;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 15px;
+          /* Уменьшили gap с 30px до 15px */
+          padding: 0 20px;
+      }
+
+      .footer-section {
+          margin-bottom: 10px;
+          /* Уменьшили margin с 20px до 10px */
+      }
+
+      .footer-section h3 {
+          color: #fff;
+          margin-bottom: 10px;
+          /* Уменьшили margin с 15px до 10px */
+          font-size: 16px;
+          /* Уменьшили размер шрифта с 18px до 16px */
+      }
+
+      .footer-menu {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+      }
+
+      .footer-menu li {
+          margin-bottom: 5px;
+          /* Уменьшили margin с 10px до 5px */
+      }
+
+      .footer-menu a {
+          color: #fff;
+          text-decoration: none;
+          transition: color 0.3s;
+          font-size: 14px;
+          /* Уменьшили размер шрифта */
+      }
+
+      .footer-menu a:hover {
+          color: #ff6600;
+      }
+
+      .contact-info {
+          line-height: 1.4;
+          /* Уменьшили line-height с 1.6 до 1.4 */
+          font-size: 14px;
+          /* Уменьшили размер шрифта */
+      }
+
+      .contact-info p {
+          display: flex;
+          align-items: center;
+          margin-bottom: 5px;
+          /* Уменьшили margin с 10px до 5px */
+      }
+
+      .contact-info i {
+          margin-right: 8px;
+          /* Уменьшили margin с 10px до 8px */
+          width: 16px;
+          /* Уменьшили ширину с 20px до 16px */
+          color: #ff6600;
+      }
+
+      .opening-hours {
+          margin-top: 10px;
+          /* Уменьшили margin с 15px до 10px */
+          font-size: 14px;
+          /* Уменьшили размер шрифта */
+      }
+
+      .opening-hours p {
+          display: flex;
+          align-items: center;
+          margin-bottom: 5px;
+          /* Добавили margin-bottom */
+      }
+
+      .opening-hours i {
+          margin-right: 8px;
+          color: #ff6600;
+      }
+
+      .copyright {
+          text-align: center;
+          padding-top: 15px;
+          /* Уменьшили padding с 20px до 15px */
+          margin-top: 15px;
+          /* Уменьшили margin с 20px до 15px */
+          border-top: 1px solid #555;
+          font-size: 12px;
+          /* Уменьшили размер шрифта */
+      }
+
+      /* Уменьшаем отступ для адреса */
+      .contact-info span.address-indent {
+          margin-left: 24px;
+          /* Уменьшили отступ с 30px до 24px */
+      }
+
+
+      .carousel-img {
+          height: 200px;
+          width: 100%;
+          object-fit: contain;
+          background-color: #f8f9fa;
+          /* светлый фон */
+          border-radius: 0.5rem;
+          /* аналог Bootstrap rounded */
+      }
