@@ -10,11 +10,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
+</head> 
 <body>
     <!-- Хедер с адаптивным меню -->
     <header class="py-3 border-bottom bg-white shadow-sm">
-        <div class="container">
+        <div class="container-fluid px-lg-5 px-3">
             <nav class="navbar navbar-expand-lg navbar-light bg-white">
                 <div class="container-fluid">
                     <a href="{% url 'Spiridus_bau_gmbh:home' %}" class="navbar-brand">
@@ -47,15 +47,17 @@
     </header>
 
     <!-- Контент -->
-    <div class="content-wrapper">
-        <div class="container">
+    <main class="content-wrapper">
+        <div class="wide-container px-0 px-sm-3">
             {% block content %}{% endblock %}
         </div>
-    </div>
+    </main>
+
 
     <!-- Футер -->
     <footer class="footer">
         <div class="footer-content">
+
             <div class="footer-section">
                 <h3>MENU</h3>
                 <ul class="footer-menu">
@@ -71,11 +73,9 @@
                 <div class="contact-info">
                     <p><i class="fas fa-phone"></i> +41 76 123 45 67</p>
                     <p><i class="fas fa-envelope"></i> spiridusbaugmbh@gmail.com</p>
-                    <p><i class="fas fa-location-dot"></i> Zürich, Aargau, Luzern, Zug und ganze Deutschschweiz<br>
-     
+                    <p><i class="fas fa-location-dot"></i> Zürich, Aargau, Luzern, Zug und ganze Deutschschweiz</p>
                 </div>
             </div>
-            
 
             <div class="footer-section">
                 <h3>Öffnungszeiten</h3>
@@ -84,6 +84,7 @@
                     <p><i class="far fa-clock"></i> Samstag: 9:30 – 15:00</p>
                 </div>
             </div>
+
         </div>
 
         <div class="copyright">
